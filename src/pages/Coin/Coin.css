@@ -1,0 +1,47 @@
+
+
+/* Loading Animation */
+/* -------------------------------------------- */
+/* Full screen overlay with blur background */
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.spin {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  animation: rotate-square 1.2s infinite ease-in-out;
+}
+
+@keyframes rotate-square {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/* Alternative: Dark blur background */
+.spinner.dark {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.spinner.dark .spin {
+  background-color: #ffffff;
+}
