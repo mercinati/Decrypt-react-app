@@ -24,6 +24,20 @@ const LineChart = ({historicalData}) => {
         width="100%"
         height="400px"
         legendToggle
+        options={{
+            title: 'Price History',
+            hAxis: {
+                title: 'Date',
+                format: 'MMM dd, yyyy',
+            },
+            vAxis: {
+                title: 'Price',
+                format: 'currency',
+            },
+            backgroundColor: '#f1f1f1',
+            chartArea: { width: '80%', height: '70%' },
+            colors: ['#1a73e8'],
+        }}
     />
   )
 }
